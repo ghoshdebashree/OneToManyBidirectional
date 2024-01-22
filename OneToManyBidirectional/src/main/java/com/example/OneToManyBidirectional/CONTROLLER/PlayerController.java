@@ -32,7 +32,7 @@ public class PlayerController {
 
     @GetMapping("/{id}")
     public Player getPlayer(@PathVariable int id){
-        return service.getOnePlayer(id);
+        return service.getPlayer(id);
     }
 
     @PostMapping

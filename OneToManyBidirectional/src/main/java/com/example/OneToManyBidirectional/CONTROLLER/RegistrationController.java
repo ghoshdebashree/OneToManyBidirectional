@@ -24,7 +24,7 @@ public class RegistrationController {
         return service.getOneRegistration(id);
     }
 
-    @PostMapping
+    @PostMapping("/addR")
     public Registration addRegistration(@RequestBody Registration registration) {
         return service.addRegistration(registration);
     }

@@ -17,7 +17,7 @@ public class PlayerService {
     public List<Player> getAllPlayers(){
         return playerRepository.findAll();
     }
-    public Player getOnePlayer(int id){
+    public Player getPlayer(int id){
         return playerRepository.findById(id).get();
     }
     public Player addPlayers(Player player){

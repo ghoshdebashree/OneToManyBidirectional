@@ -1,6 +1,7 @@
 package com.example.OneToManyBidirectional.ENTITY;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.*;
@@ -23,6 +24,7 @@ public class Player {
 
     @OneToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "profile_id", referencedColumnName = "id")
+    //@JsonManagedReference
     private PlayerProfile playerProfile;
 
     @OneToMany(mappedBy="player", cascade= CascadeType.ALL)
